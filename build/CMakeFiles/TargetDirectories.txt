@@ -1,3 +1,0 @@
-/home/damian/coding/meDAW/build/CMakeFiles/meDAW.dir
-/home/damian/coding/meDAW/build/CMakeFiles/edit_cache.dir
-/home/damian/coding/meDAW/build/CMakeFiles/rebuild_cache.dir
