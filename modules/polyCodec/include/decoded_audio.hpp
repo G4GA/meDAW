@@ -1,10 +1,10 @@
 #pragma once
 
-#include <vector>
 #include <variant>
 #include <cstdint>
 #include <optional>
 #include <memory>
+
 
 class PCMVal
 {
@@ -18,9 +18,9 @@ class PCMVal
             UINT,
             FLOAT
         };
-        Type getType();
-        std::optional<int> getInt();
-        std::optional<float> getFloat();
+        Type getType() const;
+        std::optional<int> getInt() const;
+        std::optional<float> getFloat() const;
 };
 
 class DecodedAudio
