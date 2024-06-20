@@ -19,14 +19,14 @@ class PCMVal
             FLOAT
         };
         Type getType() const;
-        std::optional<int> getInt() const;
+        std::optional<uint32_t> getInt() const;
         std::optional<float> getFloat() const;
 };
 
 class DecodedAudio
 {
     private:
-        std::unique_ptr<PCMVal[]> pcm_values;
+        std::shared_ptr<PCMVal[]> pcm_values;
         // Metadata
         std::size_t channel_count;
         std::size_t sample_rate;
@@ -34,7 +34,7 @@ class DecodedAudio
         std::size_t bits_per_sample;
         std::size_t block_align;
     public:
-        DecodedAudio(std::unique_ptr<PCMVal[]>,
+        DecodedAudio(std::shared_ptr<PCMVal[]>,
                      const std::size_t &,
                      const std::size_t &,
                      const std::size_t &,
@@ -51,3 +51,4 @@ class DecodedAudio
 
         PCMVal getValueAt(const std::size_t &) const;
 };
+
