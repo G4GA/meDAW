@@ -1,9 +1,4 @@
-#include "../include/decoded_audio.hpp"
-#include <cstddef>
-#include <cstdint>
-#include <memory>
-#include <optional>
-#include <variant>
+#include <decoded_audio.hpp>
 
 //PCMVal methods
 PCMVal::PCMVal(const uint32_t &value) :
@@ -16,7 +11,7 @@ PCMVal::PCMVal(const float &value) :
 
 PCMVal::Type PCMVal::getType () const
 {
-    return static_cast<PCMVal::Type>(this -> value.index());
+return static_cast<PCMVal::Type>(this -> value.index());
 }
 
 std::optional<float> PCMVal::getFloat () const
