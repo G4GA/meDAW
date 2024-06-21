@@ -1,1 +1,30 @@
 #!/usr/bin/bash
+
+# Fields for manage tool:
+#   1.- Action to be performed. Right now there
+#       there are 3 possible actions, though later
+#       it can have more added to it:
+#           - build: Builds an specific file
+#           - run: Runs an specific binary           
+#           - config: Configures the compilation targets
+#
+#   2.- Target. This one does not apply to
+#       the third option, only run and build
+#       and it simply is the target to which you
+#       will either run or build 
+#
+
+action=$1
+bin=$2
+
+case "$action" in
+    "build")
+        make -C build "$bin"
+    ;;
+    "run")
+        "$(find build -name ${bin})"
+    ;;
+    "config")
+        cmake -B build -S .
+    ;;
+esac
