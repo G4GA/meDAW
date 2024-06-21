@@ -19,7 +19,11 @@ bin=$2
 
 case "$action" in
     "build")
-        make -C build "$bin"
+        if [[ -z "$bin" ]]; then
+            make -C build
+        else
+            make -C build "$bin"
+        fi
     ;;
     "run")
         "$(find build -name ${bin})"
