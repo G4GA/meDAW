@@ -13,14 +13,19 @@ class PCMVal
     public:
         PCMVal(const uint32_t &);
         PCMVal(const float &);
+        
         enum class Type
         {
             UINT,
             FLOAT
         };
+        
         Type getType() const;
         std::optional<uint32_t> getInt() const;
         std::optional<float> getFloat() const;
+        
+        //Operator overload
+        PCMVal operator= (const PCMVal &);
 };
 
 class DecodedAudio

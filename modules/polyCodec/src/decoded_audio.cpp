@@ -1,6 +1,7 @@
 #include <decoded_audio.hpp>
 
 //PCMVal methods
+
 PCMVal::PCMVal(const uint32_t &value) :
     value(value)
 {}
