@@ -2,7 +2,7 @@
 
 //PCMVal methods
 
-PCMVal::PCMVal(const uint32_t &value) :
+PCMVal::PCMVal(const std::uint32_t &value) :
     value(value)
 {}
 
@@ -22,7 +22,7 @@ std::optional<float> PCMVal::getFloat () const
 
 std::optional<uint32_t> PCMVal::getInt () const
 {
-    return std::holds_alternative<uint32_t>(value) ? std::optional<uint32_t>(std::get<uint32_t>(value)) : std::nullopt;
+    return std::holds_alternative<uint32_t>(value) ? std::optional<std::uint32_t>(std::get<std::uint32_t>(value)) : std::nullopt;
 }
 
 //DecodedAudio methods

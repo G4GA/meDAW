@@ -9,9 +9,9 @@
 class PCMVal
 {
     private:
-        std::variant<uint32_t, float> value;
+        std::variant<std::uint32_t, float> value;
     public:
-        PCMVal(const uint32_t &);
+        PCMVal(const std::uint32_t &);
         PCMVal(const float &);
         
         enum class Type
@@ -21,11 +21,8 @@ class PCMVal
         };
         
         Type getType() const;
-        std::optional<uint32_t> getInt() const;
-        std::optional<float> getFloat() const;
-        
-        //Operator overload
-        PCMVal operator= (const PCMVal &);
+        std::optional<std::uint32_t> getInt() const;
+        std::optional<float> getFloat() const;     
 };
 
 class DecodedAudio

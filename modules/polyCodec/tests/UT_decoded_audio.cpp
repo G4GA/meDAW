@@ -11,7 +11,7 @@ class UTDecodedAudio
         UTDecodedAudio();
         void run();
     private:
-        const uint32_t UINT_VAL = 10;
+        const std::uint32_t UINT_VAL = 10;
         const float FLOAT_VAL = 10.5;
         PCMVal *test_pcmval_i;
         PCMVal *test_pcmval_f; 
@@ -27,7 +27,7 @@ UTDecodedAudio::UTDecodedAudio() :
 void UTDecodedAudio::run()
 {
         std::cout << tColor::color_o("[decoded_audio.hpp file tests]\n\n", tColor::BOLD);
-        uint32_t ival = 10;
+        std::uint32_t ival = 10;
         float fval = 10.5;
                
         test_pcmval_i = new PCMVal(ival); 
